@@ -16,5 +16,5 @@
     baseurl: https://www.opentlc.com/download/ansible_bootcamp/repo/internal.repo
     enabled: yes
  
-- name: install base tools and packages
+#- name: install base tools and packages
 
