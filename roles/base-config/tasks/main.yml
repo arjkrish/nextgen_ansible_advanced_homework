@@ -9,6 +9,12 @@
     backup: yes
 
 - name: enable repos
+  yum_repository:
+    name: enable repos
+    description: enable repos
+    file: external_repos
+    baseurl: https://www.opentlc.com/download/ansible_bootcamp/repo/internal.repo
+    enabled: yes
  
 - name: install base tools and packages
 
