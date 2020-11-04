@@ -2,7 +2,11 @@
   gather_facts: false
   tasks:
   - name: OpenStack servers
+    uri:
+      url: http://www.example.com
   - name: Curl website
+    uri:
+      url: http://www.example.com
 
   - name: Fail if 'Ansible has done its job' is not in the page content
     fail:
