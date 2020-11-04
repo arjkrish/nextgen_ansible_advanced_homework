@@ -1,16 +1,27 @@
-- hosts: workstation
-  gather_facts: false
-  tasks:
-  - name: OpenStack servers
-    os_port_info:
-      cloud: mycloud
-    register: webpage
+#- hosts: workstation
+#  gather_facts: false
+#  tasks:
+#  - name: OpenStack servers
+#    os_port_info:
+#      cloud: mycloud
+#    register: webpage
+
 #  - name: Curl website
 #    uri:
 #      url: "http://localhost"
 #      return_content: yes
 #      status_code: 200
 #    register: webpage
+
+- hosts: frontends
+  gather_facts: false
+  tasks:
+  - name: Curl website
+    uri:
+      url: "http://localhost"
+      return_content: yes
+      status_code: 200
+    register: webpage
 
   - debug: var=webpage.content
   
